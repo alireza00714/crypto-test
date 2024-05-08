@@ -1,0 +1,36 @@
+.marketListItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: var(--gray-100) 1px solid;
+}
+
+.marketListItem:last-child {
+  border-bottom: none;
+}
+
+.marketListItem__infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.marketListItem__image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}
+
+.marketListItem__priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.marketListItem__price {
+  font-size: 0.875rem;
+}
+
+.marketListItem__currency {
+  color: var(--text-color-secondary);
+}
