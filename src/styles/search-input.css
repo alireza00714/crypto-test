@@ -20,6 +20,8 @@
 .searchInput__input {
   width: 100%;
   border: none;
+  background-color: transparent;
+  color: var(--text-color);
 }
 
 .searchInput__input::placeholder {

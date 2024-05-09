@@ -24,6 +24,12 @@ body,
   width: 100%;
 }
 
+body {
+  --normal-font-size: 0.75rem;
+
+  background-color: var(--bkg-color);
+}
+
 html,
 body,
 div,
@@ -106,7 +112,8 @@ time,
 mark,
 audio,
 video {
-  direction: rtl;
+  font-family: "VazirmatnVF", "Vazirmatn", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
@@ -264,7 +271,7 @@ input:focus {
   font-weight: 100 900;
   font-style: normal;
   /* for the other supporting browsers */
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* regular fonts */
@@ -274,7 +281,7 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -282,7 +289,7 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -290,7 +297,7 @@ input:focus {
   src: url("assets/fonts/webfonts/Vazirmatn-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -298,7 +305,7 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -306,7 +313,7 @@ input:focus {
   src: url("assets/fonts/webfonts/Vazirmatn-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -314,7 +321,7 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -322,7 +329,7 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -330,7 +337,7 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -338,5 +345,5 @@ input:focus {
   src: url("/assets/fonts/webfonts/Vazirmatn-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }

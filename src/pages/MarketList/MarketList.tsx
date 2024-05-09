@@ -1,38 +1,44 @@
-import { useState } from "react";
-import SearchInput from "../../components/SearchInput";
+import { useEffect } from "react";
 import "./styles.css";
-import { IoSearchSharp } from "react-icons/io5";
-import SortCol from "../../components/SortCol";
-import { useCurrencies } from "../../api";
+import { usePairs } from "../../api";
 import Loader from "../../components/Loader";
 import MarketListItem from "../../components/MarketListItem";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFilteredSortedPairs, setPairs } from "../../store/pairsSlice";
+import { useNavigate } from "react-router-dom";
+import MarketListHeader from "../../components/MarketListHeader";
 
 export default function MarketList() {
-  const [searchValue, setSearchValue] = useState("");
+  const navigate = useNavigate();
+  const { data, isLoading, error } = usePairs();
+  const dispatch = useDispatch();
+  const pairs = useSelector(selectFilteredSortedPairs);
 
-  const { data, isLoading } = useCurrencies();
+  useEffect(() => {
+    if (data) dispatch(setPairs(data.data));
+  }, [data, dispatch]);
+
+  const handleClickMarketListItem = (name: string) => {
+    navigate(`/detail/${name}`);
+  };
 
   return (
     <div className="marketListPage">
-      <div className="marketListPage__header">
-        <SearchInput
-          value={searchValue}
-          onChange={(value) => setSearchValue(value)}
-          placeholder="جستجوی بازار"
-          rightIcon={<IoSearchSharp />}
-        />
-        <div className="marketListPage__header__sortContainer">
-          <SortCol text="نام" />
-          <SortCol text="آخرین قیمت" />
-        </div>
-      </div>
+      <MarketListHeader />
       <div className="marketListPage__marketList">
         <Loader
-          data={data?.data}
+          data={pairs}
           isLoading={isLoading}
-          loadingComponent={"loading"}
+          error={error?.message}
+          loadingComponent={"در حال بارگذاری..."}
           render={(data) =>
-            data.map((item) => <MarketListItem key={item.id} market={item} />)
+            data.map((item) => (
+              <MarketListItem
+                key={`${item.url_name}-${item.web_link}`}
+                market={item}
+                onClick={(name) => handleClickMarketListItem(name)}
+              />
+            ))
           }
         />
       </div>

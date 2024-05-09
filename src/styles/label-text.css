@@ -10,4 +10,5 @@
 
 .labelText__text {
   color: var(--text-color);
+  direction: ltr;
 }

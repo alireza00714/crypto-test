@@ -3,7 +3,7 @@ export interface CommonResponse<T> {
   status: number;
 }
 
-interface CurrencyName {
+export interface CurrencyName {
   en: string;
   fa: string;
 }
@@ -23,7 +23,7 @@ interface Last24hChange {
   quote_volume: number;
 }
 
-export interface Pairs {
+export interface Pair {
   amount_step: number;
   base_currency_id: number;
   base_currency_symbol: CurrencyName;
@@ -34,7 +34,7 @@ export interface Pairs {
     last24h: Last24hChange;
   };
   icon: number;
-  logo: number;
+  logo: string;
   name: CurrencyName;
   pair_id: number;
   price_precision: number;
@@ -56,7 +56,7 @@ export interface Currency {
   factor: number;
   has_tag: boolean;
   icon: string;
-  id: 1;
+  id: number;
   international_price: null;
   logo: string;
   name: string;

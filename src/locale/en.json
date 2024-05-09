@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "name": "name",
+    "lastPrice": "last price",
+    "marketSearch": "market search",
+    "englishName": "name",
+    "price": "price",
+    "last24hChange": "last 24h change",
+    "tradeVolume": "trade volume",
+    "back": "back"
+  }
+}

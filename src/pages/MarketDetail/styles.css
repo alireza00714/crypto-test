@@ -12,14 +12,12 @@
 
 .marketDetailPage__header {
   gap: 1rem;
-}
-
-.marketDetailPage__header__imageContainer {
-  width: 2.5rem;
-  height: 2.5rem;
+  color: var(--text-color);
 }
 
 .marketDetailPage__header__image {
+  width: 4rem;
+  height: 4rem;
   border-radius: 100%;
 }
 
@@ -28,4 +26,16 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+}
+
+.marketDetailPage_backButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  left: 1rem;
+  padding: 0.75rem 0;
+  border-radius: 1rem;
+  background-color: transparent;
+  border: var(--border-color) 2px solid;
+  color: var(--text-color);
 }

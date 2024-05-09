@@ -1,0 +1,12 @@
+{
+  "translation": {
+    "name": "نام",
+    "lastPrice": "آخرین قیمت",
+    "marketSearch": "جستجوی بازار",
+    "englishName": "نام انگلیسی",
+    "price": "قیمت",
+    "last24hChange": "تغییرات 24 ساعته",
+    "tradeVolume": "حجم معاملاتی",
+    "back": "بازگشت"
+  }
+}

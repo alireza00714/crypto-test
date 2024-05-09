@@ -4,8 +4,8 @@ import "../../styles/search-input.css";
 interface Props {
   value: string;
   onChange: (value: string) => void;
-  rightIcon?: ReactNode;
-  placeholder?: string;
+  rightIcon: ReactNode;
+  placeholder: string;
 }
 
 export default function SearchInput({
@@ -13,7 +13,7 @@ export default function SearchInput({
   onChange,
   rightIcon,
   placeholder,
-}: Readonly<Props>) {
+}: Readonly<Partial<Props>>) {
   return (
     <div className="searchInput">
       {rightIcon && <span className="searchInput__icon">{rightIcon}</span>}
@@ -21,7 +21,7 @@ export default function SearchInput({
         className="searchInput__input"
         placeholder={placeholder}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => onChange?.(e.target.value)}
       />
     </div>
   );
