@@ -11,6 +11,7 @@
 .sortCol__indicatorsContainer {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .sortCol__indicatorsContainer svg {
