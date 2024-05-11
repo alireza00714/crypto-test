@@ -25,7 +25,7 @@ export default function MarketList() {
   return (
     <div className="marketListPage">
       <MarketListHeader />
-      <div className="marketListPage__marketList">
+      <div className="marketListPage__marketList custom-scroll">
         <Loader
           data={pairs}
           isLoading={isLoading}
